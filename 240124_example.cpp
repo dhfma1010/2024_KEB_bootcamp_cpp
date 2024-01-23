@@ -1,23 +1,50 @@
 #include <iostream>
 using namespace std;
 
+
 int main(){
-    unsigned int givenInt, firstDigit, secondDigit, thirdDigit, forthDigit;
 
-    cout << "Input a positive integer: ";
-    cin >> givenInt;
+    int score1, score2, score3, maxScore, minScore, score;
 
-    firstDigit = givenInt % 10;
-    secondDigit = givenInt % 100 / 10;
-    thirdDigit = givenInt % 1000 / 100;
-    forthDigit = givenInt % 10000 / 1000;
+    cout << "Input score1: ";
+    cin >> score1;
+    cout << "Input score2: ";
+    cin >> score2;
+    cout << "Input score3: ";
+    cin >> score3;
 
-    cout << "Input integer " <<givenInt << endl;
-    cout << "Extracted first digit. " << firstDigit  << endl;
-    cout << "Extracted second digit. " << secondDigit  << endl;
-    cout << "Extracted third digit. " << thirdDigit  << endl;
-    cout << "Extracted forth digit. " << forthDigit  << endl;
+    if (score1 > score2 && score1 > score3){
+        maxScore = score1;
+    }
+    else if (score2 > score1 && score2 > score3)
+    {
+        maxScore = score2;
+    }
+    else{
+        maxScore = score3;
+    }
+    if (score1<score2 && score1 <score3)
+    {
+        minScore = score1;
+    }
+    else if (score2 < score1 && score2 <= score3)
+    {
+        minScore = score2;
+    }
+    else{
+        minScore = score3;
+    }
 
+    int temp = maxScore + minScore;
+    if(temp%2 == 1)
+    {
+        temp += 1;
+    }
+    score = temp /2;
 
+    cout << "Scores: "<< score1 << " " << score2 << " "<< score3 << endl;
+    cout << "minimum and maximum scores: ";
+    cout << minScore << " " << maxScore <<endl;
+    cout << "Student score: " << score;
     return 0;
 }
