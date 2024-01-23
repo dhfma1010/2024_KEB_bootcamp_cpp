@@ -3,18 +3,21 @@ using namespace std;
 
 int main(){
 
-    int number;
+    int score;
 
-    cout << "Enter an integer: ";
-    cin >> number;
+    cout << "Enter a score 0~100: ";
+    cin >> score;
 
-    if (number<0)
+    if (score >= 80)
     {
-        number = -number;
+        cout << "Wow Pass" << endl;
+    }
+    else{
+
+        cout << "No Pass" << endl;
     }
 
-    cout << "Absolute value of the number you entered is: "<< number;
-
-
     return 0;
+
+
 }
