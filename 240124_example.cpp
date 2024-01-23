@@ -1,23 +1,28 @@
 #include <iostream>
 using namespace std;
 
+
 int main(){
 
-    int score;
+    int num1, num2;
+    int larger;
 
-    cout << "Enter a score 0~100: ";
-    cin >> score;
+    cout << "Input the first number: ";
+    cin >> num1;
+    cout << "Input the second number: ";
+    cin >> num2;
 
-    if (score >= 80)
+    if(num1 >= num2)
     {
-        cout << "Wow Pass" << endl;
-    }
-    else{
+        larger = num1;
 
-        cout << "No Pass" << endl;
+    }
+    else
+    {
+        larger = num2;
     }
 
+    cout << "The larger num is : " << larger;
     return 0;
-
 
 }
