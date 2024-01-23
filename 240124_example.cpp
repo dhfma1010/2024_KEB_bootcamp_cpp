@@ -1,28 +1,22 @@
 #include <iostream>
 using namespace std;
 
-
 int main(){
 
-    int num1, num2;
-    int larger;
+    int age; 
+    bool eligible;
 
-    cout << "Input the first number: ";
-    cin >> num1;
-    cout << "Input the second number: ";
-    cin >> num2;
+    cout << "Input your age: ";
+    cin >> age;
 
-    if(num1 >= num2)
-    {
-        larger = num1;
+    eligible = (age >= 25) && (age <= 100);
 
+    if (eligible){
+        cout << "Eligible to rent a car. ";
     }
-    else
-    {
-        larger = num2;
+    else {
+        cout << "not eligible to rent a car. ";
+
+        return 0;
     }
-
-    cout << "The larger num is : " << larger;
-    return 0;
-
 }
