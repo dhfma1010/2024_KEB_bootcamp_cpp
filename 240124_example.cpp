@@ -1,39 +1,21 @@
-// if ~ Gross payment of employee
+// if ~ else Pass/Fail
 
 #include <iostream>
-#include <iomanip>;
 using namespace std;
 
 int main(){
 
-    double hours;
-    double rate;
-    double regularPay;
-    double overPay;
-    double totalPay;
+    int score;
 
-    cout << "Input hours worked: ";
-    cin >> hours;
-    cout << "Input pay rate: ";
-    cin >> rate;
+    cout << "Input a score 0~100: ";
+    cin >> score;
 
-    regularPay = hours * rate;
-    overPay = 0.0;
-
-    if(hours > 40.0)
+    if(score >= 90)
     {
-        overPay = (hours-40.0) * rate * 0.30;
+        cout << "Pass!!" << endl;
     }
-
-    totalPay = regularPay + overPay;
-
-    cout << fixed << showpoint;
-    cout << "Regular pay = " << setprecision(2) << regularPay << endl;
-    cout << "Ober time pay = " << setprecision(3) << overPay << endl;
-    cout << "Total pay = " << setprecision(4) << totalPay << endl;
-
+    else{
+        cout << "No Pass" << endl;
+    }
     return 0;
-
-
-
 }
